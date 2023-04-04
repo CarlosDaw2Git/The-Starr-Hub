@@ -10862,7 +10862,7 @@ textarea.form-control-lg {
 
 #barraNav {
   padding: 12pt 40pt;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 100;
   width: 100%;
