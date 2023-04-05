@@ -3,6 +3,8 @@ $(document).ready(function(){
     $('#linkInicio').click(function(){
         window.location.reload()
     })
+
+    //TODO
     $('#linkBrawlers').click(function(){
         $.ajax({
             type: 'GET',
@@ -12,5 +14,9 @@ $(document).ready(function(){
                 $('#contenidoWeb').html(datosRecogidos)
             }
         })
+    })
+
+    $('#linkPerfil').click(function(){
+        
     })
 })
