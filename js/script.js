@@ -8,15 +8,11 @@ $(document).ready(function(){
     $('#linkBrawlers').click(function(){
         $.ajax({
             type: 'GET',
-            url: './content/brawlers.html',
+            url: 'content/brawlers.html',
             data: {},
             success: function(datosRecogidos){
                 $('#contenidoWeb').html(datosRecogidos)
             }
         })
-    })
-
-    $('#linkPerfil').click(function(){
-        
     })
 })

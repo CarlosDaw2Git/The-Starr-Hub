@@ -1,1 +1,25 @@
-<h2 class="textoBS-primary">Te encuentras en la sección Brawlers</h2>
+<h2 class="textoBS-primary text-center">Te encuentras en la sección Brawlers</h2>
+<h3>Lista con todos los brawlers:</h3>
+<div class="d-flex flex-column" id="listaBrawlers"></div>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+        url: 'https://api.brawlapi.com/v1/brawlers',
+        dataType: 'json',
+        success: function(datosRecogidos){
+            cargarListaBrawlers(datosRecogidos)
+        },
+        error: function(){
+            console.log("Error al mostrar la información")
+        }
+    })
+    })
+
+    function cargarListaBrawlers(datosJson){
+        for (let i = 0; i < datosJson.list.length; i++) {
+            let brawler = datosJson.list[i];
+            $('#listaBrawlers').append("<span>"+brawler.name+"</span>")
+            
+        }
+    }
+</script>

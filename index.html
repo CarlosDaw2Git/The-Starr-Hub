@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Bienvenido al Starr Hub!</title>
+    <link rel="icon" type="image/x-icon" href="img/bs-icon-tab.webp">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/cookies.js"></script>
@@ -12,7 +13,7 @@
 </head>
 <body>
     <!--Barra de navegación-->
-    <nav id="barraNav" class="navbar navbar-expand-lg bg-body-tertiary bg-primary textoBS-primary">
+    <nav id="barraNav" class="navbar navbar-expand-lg bg-body-tertiary bg-primary textoBS-primary shadow">
         <div class="container-fluid">
             <img src="img/Brawl-Stars-logo.png" alt="shLogo" id="shLogoNavbar">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -21,10 +22,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" aria-label="Search">
                     <button class="btn btn-danger" type="submit">Buscar</button>
                 </form>
+                -->
                 <div class="w-100 d-lg-flex justify-content-lg-end text-center">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -39,22 +42,60 @@
                         <li class="nav-item">
                             <a class="nav-link link-dark" href="#" id="linkModosJuego">Modos de Juego</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link link-dark" href="#" id="linkPerfil">Perfil</a>
+                        <li class="nav-item" id="item-Perfil">
+                            <a class="nav-link link-dark" href="#" id="linkPerfil">Regístrate</a>
                         </li>
                     </ul>
                 </div>                
             </div>
         </div>
     </nav>
-    <div id="contenidoWeb">
-        <div id="hero" class="container-fluid bg-secondary">
+    <!--Contenido de la web dinámica-->
+    <div id="contenidoWeb" class="bg-success">
+        <h2 class="textoBS-primary text-dark text-center mb-0">¡Bienvenido al Starr Hub!</h2>
+        <!--Un carrusel con varias noticias-->
+        <!--
+        <div id="hero" class="container-fluid bg-success p-4">
             <div id="hero-content">
-                <h2 class="textoBS-primary text-dark">¡Bienvenido al Starr Hub!</h2>
-                <p></p>
+                <h2 class="textoBS-primary text-dark text-center mb-0">¡Bienvenido al Starr Hub!</h2>
             </div>
         </div>
+        -->
     </div>
+    <!--Pie de página-->
+    <footer class="container-fluid bg-primary p-3 m-0">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-4">
+                <h3 class="textoBS-primary">The Starr Hub</h3>
+                <div class="d-flex flex-column textoBS-secondary">
+                    <span><b>Proyecto creado por:</b>&nbsp;Carlos López Ruiz</span>
+                    <span><b>Tutor del proyecto:</b>&nbsp;Antonio Moreno Alonso</span>
+                    <span><b>Ciclo Formativo:</b>&nbsp;Desarrollo De Aplicaciones Web</span>
+                    <span><b>Centro Formativo:</b>&nbsp;IES Suárez de Figueroa</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 p-4">
+                <h3 class="textoBS-primary">Redes sociales</h3>
+                <div class="d-flex flex-column textoBS-secondary">
+                    <a href="https://www.reddit.com/r/Brawlstars/" class="link-dark text-decoration-none">
+                        <i class="bi bi-reddit"></i>&nbsp;Reddit
+                    </a>
+                    <a href="https://www.youtube.com/@BrawlStars" class="link-dark text-decoration-none">
+                        <i class="bi bi-youtube"></i>&nbsp;Youtube
+                    </a>
+                    <a href="https://www.facebook.com/brawlstars/" class="link-dark text-decoration-none">
+                        <i class="bi bi-facebook"></i>&nbsp;Facebook
+                    </a>
+                    <a href="https://twitter.com/BrawlStars" class="link-dark text-decoration-none">
+                        <i class="bi bi-twitter"></i>&nbsp;Twitter
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 p-4">
+                <h3 class="textoBS-primary">Coméntanos tu feedback</h3>
+            </div>
+        </div>
+    </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

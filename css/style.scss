@@ -1,10 +1,11 @@
 //Variables colores Brawl Stars
 $azulBS: #0a73e5;
 $rojoBS: #ff0000;
+$verdeBS: #70c054;
 
 //Variables de colores
 //$blue:    #0d6efd;
-$red:     #dc3545;
+//$red:     #dc3545;
 $yellow:  #ffc107;
 $green:   #198754;
 $cyan:    #0dcaf0;
@@ -15,36 +16,31 @@ $gray-600: #6c757d;
 $gray-800: #343a40;
 $gray-900: #212529;
 
-
-//Variables generales
-$primary:       $azulBS;
-$secondary:     $gray-600;
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $rojoBS;
-$light:         $gray-100;
-$gray:          $gray-800;
-$dark:          $gray-900;
-
 //Variable que contiene todos los colores
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark,
+  "primary":    $azulBS,
+  "secondary":  $gray-600,
+  "success":    $green,
+  "info":       $cyan,
+  "warning":    $yellow,
+  "danger":     $rojoBS,
+  "light":      $gray-100,
+  "dark":       $gray-900,
   //Añadido:
-  "gray":       $gray
+  "gray":       $gray-800,
+  "greenBS":    $verdeBS
 );
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .textoBS-primary{
     font-family: 'Lilita One', cursive;
+}
+
+.textoBS-secondary{
+    font-family: 'Nunito', sans-serif;
 }
 
 //Barra de navegación
@@ -69,4 +65,13 @@ $theme-colors: (
 
 #navbarSupportedContent ul{
     margin-left: 30pt;
+}
+
+#item-Perfil{
+    height: 100%;
+}
+
+#botonRegistrarse{
+    padding: 8px;
+    vertical-align: middle;
 }
