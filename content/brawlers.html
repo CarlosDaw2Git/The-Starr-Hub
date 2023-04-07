@@ -1,6 +1,11 @@
-<h2 class="textoBS-primary text-center">Te encuentras en la sección Brawlers</h2>
-<h3>Lista con todos los brawlers:</h3>
-<div class="d-flex flex-column" id="listaBrawlers"></div>
+<h2 class="textoBS-primary text-center p-3">Brawlers</h2>
+<div class="container d-flex flex-column" id="listaBrawlers">
+    <div class="row text-center textoBS-primary fs-3">
+        <div class="col-4">Imagen</div>
+        <div class="col-4">Nombre</div>
+        <div class="col-4">Calidad</div>
+    </div>
+</div>
 <script>
     $(document).ready(function(){
         $.ajax({
@@ -18,8 +23,16 @@
     function cargarListaBrawlers(datosJson){
         for (let i = 0; i < datosJson.list.length; i++) {
             let brawler = datosJson.list[i];
-            $('#listaBrawlers').append("<span>"+brawler.name+"</span>")
+            $('#listaBrawlers').append(getHtmlDatosBrawler(brawler))
             
         }
+    }
+
+    function getHtmlDatosBrawler(brawler){
+        return '<div class="row text-center textoBS-secondary">\
+            <div class="col-4"><img class="img img-fluid w-25" src="'+brawler.imageUrl+'" alt="imgBrawler"></div>\
+            <div class="col-4">'+brawler.name+'</div>\
+            <div class="col-4">'+brawler.rarity.name+'</div>\
+        </div>'
     }
 </script>
