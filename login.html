@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido al Starr Hub!</title>
+    <link rel="icon" type="image/x-icon" href="img/bs-icon-tab.webp">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body class="bg-gray">
+    <!--Barra de navegación-->
+    <nav id="barraNav" class="bg-primary textoBS-primary shadow">
+        <div class="container-fluid text-center">
+            <img src="img/Brawl-Stars-logo.png" alt="shLogo" id="shLogoNavbar">
+        </div>
+    </nav>
+    <!--Contenido de la web-->
+    <div class="container-fluid d-flex justify-content-end p-3">
+        <button id="btnVolverMain" class="btn btn-warning me-3 textoBS-primary">Volver</button>
+    </div>
+    <div class="container mt-5 mb-5 d-flex justify-content-center" id="divContenidoLogin">
+        <div id="form" class="d-flex flex-column bg-light p-5 rounded-5 shadow text-secondary">
+            <h4 class="h4 text-primary text-center textoBS-primary">Login</h4>
+            <label for="nombreLogin">Nombre de usuario</label>
+            <input type="text" name="nombreLogin" id="nombreLogin" class="mb-2">
+            <label for="claveLogin">Contraseña</label>
+            <input type="password" name="claveLogin" id="claveLogin" class="mb-2">
+            <span id="errorReserva"></span>
+            <button id="verificar" class="btn btn-outline-primary mb-2 mt-2 textoBS-primary">Verificar</button>
+            <span class="mb-1">¿Aún no tienes una cuenta?&nbsp;</span>
+            <button id="registrarse" class="btn btn-outline-danger textoBS-primary">Registrate</button>
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

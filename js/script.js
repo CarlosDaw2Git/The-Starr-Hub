@@ -4,7 +4,6 @@ $(document).ready(function(){
         window.location.reload()
     })
 
-    //TODO
     $('#linkBrawlers').click(function(){
         $.ajax({
             type: 'GET',
@@ -15,4 +14,19 @@ $(document).ready(function(){
             }
         })
     })
+
+    //Comprobar si está la cookie de usuario
+    if(comprobarCookie("userID")){
+        $('#linkPerfil').text("Perfil")
+        /*
+        $('#linkPerfil').click(function(){
+
+        })
+        */
+    }
+    else{
+        $('#linkPerfil').click(function(){
+            window.location = "login.html"
+        })
+    }
 })

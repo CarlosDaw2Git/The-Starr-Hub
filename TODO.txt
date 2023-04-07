@@ -1,0 +1,16 @@
+LOGIN SECTION
+-Login
+    +Hacer un Ctr+C, Ctr+V del proyecto de Entorno Cliente
+-DB_Manager
+    +Verificaciones
+MAIN SECTION
+-Index
+    +Cambiar los logos de la página y del icono
+    +Los links cuando pasas el ratón por encima se nota MUY POCO. Hay que cambiar eso
+    +Carrousel con varias noticias
+    +Una sección en la que ponga qué modos de juego están ahora mismo
+    +Una sección con los 10 brawlers más usados
+    +Falta agradecimiento a la API de Brawlify
+-Brawlers
+    +OffCanvas lateral con TODA la información del brawler cuando se hace click en uno
+-Crear un archivo HTML para cada sección
