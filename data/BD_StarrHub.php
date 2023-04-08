@@ -1,5 +1,5 @@
 <?php
-
+include("T_Usuario.php");
 
 class BD{
     public static function realizarConexión(){
