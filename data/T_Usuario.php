@@ -40,9 +40,11 @@ class Usuario{
 
     function getArrayData(){
         return array(
-            "id" => $this->id,
-            "nombre" => $this->nombre,
-            "clave" => $this->clave
+            "user" => array(
+                "id" => $this->id,
+                "nombre" => $this->nombre,
+                "clave" => $this->clave
+            )
         );
     }
 }

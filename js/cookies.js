@@ -23,3 +23,11 @@ function getValorCookie(nombreCookie){
     }
     return null
 }
+
+function crearCookie(nombreCookie, valorCookie){
+    document.cookie = nombreCookie+"="+valorCookie+";max-age=999999999;"
+}
+
+function borrarCookie(nombreCookie){
+    document.cookie = nombreCookie+"=;max-age=0;"
+}
