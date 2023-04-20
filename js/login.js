@@ -60,12 +60,12 @@ function validarUsuario(){
         type: 'POST',
         success: function(datosRecogidos){
             let datosJson = JSON.parse(datosRecogidos)
-            if(datosJson.success == "false"){
+            if(datosJson.success == false){
                 $('#error').html(datosJson.message)
             }
             else{
                 //crearCookie("userID", datosJson.id)
-                //window.location = "./index.html"
+                window.location = "./index.html"
             }
         }
     })
@@ -97,5 +97,20 @@ function registrarUsuario(){
         return false
     }
 
-    $('#error').text("Formato admitido")
+    $.ajax({
+        data : {
+            'crearUsuario' : 'true',
+            'usuario': usuario,
+            'clave': clave
+        },
+        url: './data/BD_Manager.php',
+        type: 'POST',
+        success: function(datosRecogidos){
+            let datosJson = JSON.parse(datosRecogidos)
+            alert(datosJson.message)
+            if(datosJson.success == true){
+                window.location.reload()
+            }
+        }
+    })
 }

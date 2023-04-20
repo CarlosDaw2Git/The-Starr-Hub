@@ -17,10 +17,10 @@ class Usuario{
         return $this->id;
     }
     function getNombre(){
-        return $this->id;
+        return $this->nombre;
     }
     function getClave(){
-        return $this->id;
+        return $this->clave;
     }
 
     //Setters

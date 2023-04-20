@@ -1,10 +1,9 @@
 LOGIN SECTION
 -Login
-    +Hacer un Ctr+C, Ctr+V del proyecto de Entorno Cliente
-    +Si la persona ya está registrada, redirigir a página principal
--DB_Manager
-    +Verificaciones
+    +Habilitar el uso de las cookies
 MAIN SECTION
+-Perfil
+    +Habilitar el uso de las cookies
 -Index
     +Cambiar los logos de la página y del icono
     +Los links cuando pasas el ratón por encima se nota MUY POCO. Hay que cambiar eso
