@@ -19,7 +19,6 @@ function getValorCookie(nombreCookie){
         if(nombreCookie == cookie[0]){
             return cookie[1]
         }
-        
     }
     return null
 }

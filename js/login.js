@@ -64,7 +64,7 @@ function validarUsuario(){
                 $('#error').html(datosJson.message)
             }
             else{
-                //crearCookie("userID", datosJson.id)
+                crearCookie("userID", datosJson.user.id)
                 window.location = "./index.html"
             }
         }

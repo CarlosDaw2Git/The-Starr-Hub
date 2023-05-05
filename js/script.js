@@ -18,11 +18,16 @@ $(document).ready(function(){
     //Comprobar si está la cookie de usuario
     if(comprobarCookie("userID")){
         $('#linkPerfil').text("Perfil")
-        /*
         $('#linkPerfil').click(function(){
-
+            $.ajax({
+                type: 'GET',
+                url: 'content/perfil.html',
+                data: {},
+                success: function(datosRecogidos){
+                    $('#contenidoWeb').html(datosRecogidos)
+                }
+            })
         })
-        */
     }
     else{
         $('#linkPerfil').click(function(){
