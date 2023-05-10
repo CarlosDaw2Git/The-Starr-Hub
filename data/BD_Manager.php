@@ -66,6 +66,27 @@ if(isset($_REQUEST['crearUsuario'])){
     }
 }
 
+//Obtener datos del usuario
+if(isset($_REQUEST['getDatosUsuario'])){
+    $idUsuario = $_REQUEST['idUsuario'];
+    $usuario = BD::selectUsuarioById($idUsuario);
+    if(empty($usuario)){
+        $data['message'] = "Error: Usuario no encontrado";
+    }
+    else{
+        $datosUsuario = BD::selectDatosUsuarioById($idUsuario);
+        if(empty($datosUsuario)){
+            $data['message'] = "Error: Datos del usuario no encontrados";
+        }
+        else{
+            $data['success'] = true;
+            $data['message'] = "Usuario y datos encontrados";
+            $data = array_merge($data, $usuario->getArrayData());
+            $data = array_merge($data, $datosUsuario->getArrayData());
+        }
+    }
+}
+
 //El servidor da una respuesta
 echo json_encode($data);
 ?>

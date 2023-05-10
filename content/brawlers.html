@@ -9,15 +9,15 @@
 <script>
     $(document).ready(function(){
         $.ajax({
-        url: 'https://api.brawlapi.com/v1/brawlers',
-        dataType: 'json',
-        success: function(datosRecogidos){
-            cargarListaBrawlers(datosRecogidos)
-        },
-        error: function(){
-            console.log("Error al mostrar la información")
-        }
-    })
+            url: 'https://api.brawlapi.com/v1/brawlers',
+            dataType: 'json',
+            success: function(datosRecogidos){
+                cargarListaBrawlers(datosRecogidos)
+            },
+            error: function(){
+                console.log("Error al mostrar la información")
+            }
+        })
     })
 
     function cargarListaBrawlers(datosJson){

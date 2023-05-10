@@ -17,7 +17,7 @@ class BD{
             return $conexion;
         }
         catch (PDOException $e){
-            echo '<script>console.log("Error en realizarConexión(): '.$e->getMessage().'")';
+            echo 'Error en realizarConexión(): '.$e->getMessage();
             return null;
         }
     }
@@ -39,10 +39,56 @@ class BD{
             }
         }
         catch(PDOException $e){
-            echo "<script>alert('Error en verificarUsuario(): ".$e->getMessage()."')</script>";
+            echo "Error en verificarUsuario(): ".$e->getMessage();
         }
         finally{
             return $usuario;
+        }
+    }
+
+    public static function selectUsuarioById($idUsuario){
+        $usuario = null;
+        try{
+            $sql = "SELECT * FROM usuarios WHERE idUsuario = ?";
+            $conexion = self::realizarConexion();
+            $resultado = $conexion->prepare($sql);
+            $resultado->execute(array($idUsuario));
+            $fila = $resultado->fetch();
+            $resultado->closeCursor();
+            $conexion = null;
+            if(!empty($fila)){
+                $usuario = new Usuario($fila);
+
+            }
+        }
+        catch(PDOException $e){
+            echo "Error en selectUsuarioById(): ".$e->getMessage();
+        }
+        finally{
+            return $usuario;
+        }
+    }
+
+    public static function selectDatosUsuarioById($idUsuario){
+        $datosUsuario = null;
+        try{
+            $sql = "SELECT * FROM datos_usuario WHERE id = ?";
+            $conexion = self::realizarConexion();
+            $resultado = $conexion->prepare($sql);
+            $resultado->execute(array($idUsuario));
+            $fila = $resultado->fetch();
+            $resultado->closeCursor();
+            $conexion = null;
+            if(!empty($fila)){
+                $datosUsuario = new DatosUsuario($fila);
+
+            }
+        }
+        catch(PDOException $e){
+            echo "Error en selectDatosUsuarioById(): ".$e->getMessage();
+        }
+        finally{
+            return $datosUsuario;
         }
     }
 
@@ -60,7 +106,7 @@ class BD{
             }
         }
         catch(PDOException $e){
-            echo "<script>console.log('Error en insertUsuario(): ".$e->getMessage()."')</script>";
+            echo "Error en insertUsuario(): ".$e->getMessage();
         }
         finally{
             $resultado->closeCursor();
@@ -81,7 +127,7 @@ class BD{
             }
         }
         catch(PDOException $e){
-            echo "<script>console.log('Error en insertDatosUsuario(): ".$e->getMessage()."')</script>";
+            echo "Error en insertDatosUsuario(): ".$e->getMessage();
         }
         finally{
             $resultado->closeCursor();
