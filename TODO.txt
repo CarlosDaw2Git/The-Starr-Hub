@@ -1,17 +1,14 @@
-LOGIN SECTION
--Login
-    +Habilitar el uso de las cookies
-MAIN SECTION
--Perfil
-    +Habilitar el uso de las cookies
 -Index
     +Cambiar los logos de la página y del icono
     +Los links cuando pasas el ratón por encima se nota MUY POCO. Hay que cambiar eso
-    +Carrousel con varias noticias
+    +Carrousel con varias noticias [En ello]
     +Una sección en la que ponga qué modos de juego están ahora mismo
     +Una sección con los 10 brawlers más usados
     +Falta agradecimiento a la API de Brawlify
     +Secreto en el footer?
--Brawlers
+-Brawlers, Mapas, Modos de juego
     +OffCanvas lateral con TODA la información del brawler cuando se hace click en uno
--Crear un archivo HTML para cada sección
+    +Crear un archivo HTML para cada sección
+-Noticias
+    +Almacenarlas en un JSON
+    +Mínimo 3 (referencia en el blog oficial)
