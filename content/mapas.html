@@ -23,7 +23,9 @@
     function cargarListaMapas(datos){
         for (let i = 0; i < datos.list.length; i++) {
             let mapa = datos.list[i];
-            $('#listaMapas').append(htmlDatosMapa(mapa))
+            if(!mapa.disabled){
+                $('#listaMapas').append(htmlDatosMapa(mapa))
+            }
             
         }
     }
