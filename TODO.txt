@@ -12,3 +12,6 @@
 -Noticias
     +Almacenarlas en un JSON
     +Mínimo 3 (referencia en el blog oficial)
+-BBDD
+    +Comentar las tablas
+     (>COMMENT ON [TABLE/COLUMN] nombre_tabla[.nombre_columna] IS 'comentario')

@@ -26,6 +26,17 @@ $(document).ready(function(){
         })
     })
 
+    $('#linkModosJuego').click(function(){
+        $.ajax({
+            type: 'GET',
+            url: 'content/modosJuego.html',
+            data: {},
+            success: function(datosRecogidos){
+                $('#contenidoWeb').html(datosRecogidos)
+            }
+        })
+    })
+
     //Comprobar si está la cookie de usuario
     if(comprobarCookie("userID")){
         $('#linkPerfil').text("Perfil")
