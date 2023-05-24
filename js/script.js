@@ -56,4 +56,11 @@ $(document).ready(function(){
             window.location = "login.html"
         })
     }
+    //- Cargar noticias
+    
+    //- Cargar eventos
 })
+
+function htmlNoticia(datosNoticia){
+    
+}

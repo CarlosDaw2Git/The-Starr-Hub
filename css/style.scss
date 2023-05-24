@@ -12,7 +12,8 @@ $theme-colors: (
   "dark":       #212529,
   //Añadido
   "gray":       #adb5bd,
-  "greenBS":    #70c054
+  "greenBS":    #70c054,
+  "amarilloClaro": #F8F1DA
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -31,6 +32,11 @@ $theme-colors: (
 }
 
 //MAIN INDEX
+//- Elementos comunes
+.degradadoAzul{
+    background: linear-gradient(180deg, rgba(10,132,229,1) 40%, rgba(10,99,229,1) 100%);
+}
+
 //Barra de navegación
 
 #barraNav{
@@ -54,6 +60,9 @@ $theme-colors: (
 #navbarSupportedContent ul{
     margin-left: 30pt;
 }
+
+//Body
+
 
 //LOGIN
 

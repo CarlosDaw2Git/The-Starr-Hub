@@ -1,17 +1,18 @@
 -Index
     +Cambiar los logos de la página y del icono
-    +Los links cuando pasas el ratón por encima se nota MUY POCO. Hay que cambiar eso
-    +Carrousel con varias noticias [En ello]
+    +CardSet con varias noticias [En ello]
     +Una sección en la que ponga qué modos de juego están ahora mismo
     +Una sección con los 10 brawlers más usados
-    +Falta agradecimiento a la API de Brawlify
     +Secreto en el footer?
--Brawlers, Mapas, Modos de juego
-    +OffCanvas lateral con TODA la información del brawler cuando se hace click en uno
-    +Crear un archivo HTML para cada sección
+    +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno
+-Perfil
+    Opciones de cambiar usuario, contraseña y supercell id (+ borrarlo)
+
+-Brawlers
+    +Al hacer click, desplegable con toda la info del personaje
+-Mapa
+    +Al hacer click desplegable de la info del mapa y mejores equipos
 -Noticias
     +Almacenarlas en un JSON
     +Mínimo 3 (referencia en el blog oficial)
--BBDD
-    +Comentar las tablas
-     (>COMMENT ON [TABLE/COLUMN] nombre_tabla[.nombre_columna] IS 'comentario')
+    +¿El cuerpo de las noticias en el JSON o en un TXT a parte?
