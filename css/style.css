@@ -11048,7 +11048,7 @@ textarea.form-control-lg {
   top: 0;
   z-index: 100;
   width: 100%;
-  box-shadow: #212529;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #shLogoNavbar {
@@ -11062,6 +11062,13 @@ textarea.form-control-lg {
 
 #navbarSupportedContent ul {
   margin-left: 30pt;
+}
+
+#hero {
+  height: 600px;
+  background-image: url("../img/BS_Background.jpg");
+  background-size: cover;
+  background-position-y: 95%;
 }
 
 #botonRegistrarse {

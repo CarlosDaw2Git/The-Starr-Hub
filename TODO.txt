@@ -1,10 +1,12 @@
+-BD
+    +Trigger para la creación de usuarios
 -Index
-    +Cambiar los logos de la página y del icono
     +CardSet con varias noticias [En ello]
     +Una sección en la que ponga qué modos de juego están ahora mismo
     +Una sección con los 10 brawlers más usados
-    +Secreto en el footer?
+    +Secreto en el footer? [Si da tiempo,]
     +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno
+    +Cambiar los logos de la página y del icono
 -Perfil
     Opciones de cambiar usuario, contraseña y supercell id (+ borrarlo)
 
@@ -16,3 +18,10 @@
     +Almacenarlas en un JSON
     +Mínimo 3 (referencia en el blog oficial)
     +¿El cuerpo de las noticias en el JSON o en un TXT a parte?
+
+-Version movil
+    -index
+        +Cambiar tamaño del hero en bajas resoluciones
+    -login
+        +boton volver al index centrado
+        +menos separación del login

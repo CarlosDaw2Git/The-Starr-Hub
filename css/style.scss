@@ -45,7 +45,7 @@ $theme-colors: (
     top: 0;
     z-index: 100;
     width: 100%;
-    box-shadow: #212529;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #shLogoNavbar{
@@ -62,7 +62,12 @@ $theme-colors: (
 }
 
 //Body
-
+#hero{
+    height: 600px;
+    background-image: url('../img/BS_Background.jpg');
+    background-size: cover;
+    background-position-y: 95%;
+}
 
 //LOGIN
 
