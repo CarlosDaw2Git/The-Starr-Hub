@@ -37,7 +37,7 @@ $theme-colors: (
     background: linear-gradient(180deg, rgba(10,132,229,1) 40%, rgba(10,99,229,1) 100%);
 }
 
-//Barra de navegación
+//- Barra de navegación
 
 #barraNav{
     padding: 12pt 40pt;
@@ -61,12 +61,16 @@ $theme-colors: (
     margin-left: 30pt;
 }
 
-//Body
+// - Hero
 #hero{
-    height: 600px;
-    background-image: url('../img/BS_Background.jpg');
+    background-image: url('../img/1279158.jpg');
     background-size: cover;
+    background-position-x: center;
     background-position-y: 95%;
+}
+
+#heroContent h1{
+    text-shadow: 6px 6px #000000;
 }
 
 //LOGIN
@@ -74,4 +78,51 @@ $theme-colors: (
 #botonRegistrarse{
     padding: 8px;
     vertical-align: middle;
+}
+
+//Bootstrap - muy pequeño
+@media (max-width: 576px){
+    #hero{
+        height: 300px;
+    }
+    #heroContent h1{
+        font-size: 50px;
+    }
+}
+
+//Bootstrap - sm
+@media (min-width: 576px){
+    #hero{
+        height: 350px;
+    }
+    #heroContent h1{
+        font-size: 60px;
+    }
+}
+
+//Bootstrap - md
+@media (min-width: 768px){
+    #hero{
+        height: 300px;
+    }
+    #heroContent h1{
+        font-size: 50px;
+    }
+}
+
+//Bootstrap - lg
+@media (min-width: 992px){
+    #heroContent h1{
+        font-size: 100px;
+    }
+}
+
+//Bootstrap - xl
+@media (min-width: 1200px){
+    #hero{
+        height: 600px;
+    }
+    #heroContent h1{
+        font-size: 130px;
+    }
 }

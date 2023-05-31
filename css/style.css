@@ -11065,15 +11065,57 @@ textarea.form-control-lg {
 }
 
 #hero {
-  height: 600px;
-  background-image: url("../img/BS_Background.jpg");
+  background-image: url("../img/1279158.jpg");
   background-size: cover;
+  background-position-x: center;
   background-position-y: 95%;
+}
+
+#heroContent h1, #heroContent .h1 {
+  text-shadow: 6px 6px #000000;
 }
 
 #botonRegistrarse {
   padding: 8px;
   vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    height: 300px;
+  }
+  #heroContent h1, #heroContent .h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 576px) {
+  #hero {
+    height: 350px;
+  }
+  #heroContent h1, #heroContent .h1 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 768px) {
+  #hero {
+    height: 300px;
+  }
+  #heroContent h1, #heroContent .h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  #heroContent h1, #heroContent .h1 {
+    font-size: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero {
+    height: 600px;
+  }
+  #heroContent h1, #heroContent .h1 {
+    font-size: 130px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

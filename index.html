@@ -15,7 +15,9 @@
     <!--Barra de navegación-->
     <nav id="barraNav" class="navbar navbar-expand-lg bg-body-tertiary degradadoAzul textoBS-primary">
         <div class="container-fluid">
-            <img src="img/Brawl-Stars-logo.png" alt="shLogo" id="shLogoNavbar">
+            <a class="nav-link link-light" href="#" id="linkInicio">
+                <img src="img/Brawl-Stars-logo.png" alt="shLogo" id="shLogoNavbar">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -51,13 +53,29 @@
     <!--Contenido de la web dinámica-->
     <div id="contenidoWeb">
         <!--Contenido por defecto-->
-        <div id="hero" class=" overflow-hidden">
-            <!--<h2 class="textoBS-primary text-center mb-0">Bienvenido al Starr Hub</h2>-->
+        <div id="hero" class="overflow-hidden">
+            <div id="heroContent" class="h-100 d-flex flex-column justify-content-lg-center pt-3 pt-lg-0">
+                <h1 class="textoBS-primary text-center text-light mb-0">
+                    Bienvenido al 
+                    <span class="text-warning">Starr</span>
+                    <span class="text-danger">Hub</span>
+                </h1>
+            </div>
         </div>
         <div id="noticias" class="container pt-5 pb-5">
-            <h2 class="textoBS-primary text-center mb-0 pb-3">Noticias</h2>
+            <h1 class="textoBS-primary text-center mb-0 pb-3">Noticias</h1>
             <!--Div con las tarjetas-->
             <div class="row row-cols-1 row-cols-md-3 g-4 ">
+                <div class="col">
+                    <div class="card h-100 border-greenBS">
+                      <img src="./img/0421_Update_Live_Ops_800x433_v3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title textoBS-primary text-center">Card title</h5>
+                        <p class="card-text textoBS-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <a href="#" class="btn btn-greenBS">Ver noticia</a>
+                      </div>
+                    </div>
+                  </div>
                 <div class="col">
                   <div class="card h-100 border-greenBS">
                     <img src="./img/0411_CHANGE_INCOMING_800x433.png" class="card-img-top" alt="...">
@@ -78,20 +96,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card h-100 border-greenBS">
-                    <img src="./img/440683437_1676017665.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title textoBS-primary text-center">Card title</h5>
-                      <p class="card-text textoBS-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      <a href="#" class="btn btn-greenBS">Ver noticia</a>
-                    </div>
-                  </div>
-                </div>
               </div>
         </div>
         <div id="eventos" class="container-fluid">
-            <h2 class="textoBS-primary text-center mb-0">Eventos disponibles</h2>
+            <h1 class="textoBS-primary text-center mb-0">Lista de eventos</h1>
+            <div id="eventosActivos"></div>
+            <div id="eventosSiguientes"></div>
         </div>
     </div>
     <!--Pie de página-->
@@ -129,7 +139,7 @@
             </div>
             <div class="col-12 col-lg-4 p-4">
                 <h3 class="textoBS-primary">Coméntanos tu feedback</h3>
-                <div class="input-group mb-3">
+                <div class="input-group mt-3 w-75">
                     <input type="text" class="form-control" placeholder="Escribe algo..." aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button class="btn btn-danger" type="button" id="btnFeedback">Enviar</button>
                   </div>
