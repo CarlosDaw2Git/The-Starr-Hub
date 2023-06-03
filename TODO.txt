@@ -2,9 +2,6 @@ MEMORIA DEL PROYECTO
 
 MANUAL DE USUARIO TAMBIÉN
 
--BD
-    +Trigger para la creación de usuarios[Cambios grandes]
-    +Fecha de último inicio de sesión
 -Index
     +Secreto en el footer? [Si da tiempo,]
     +Que el boton de feedback funcione (Solo con usuario y lo almaceno en la bbdd tambien?)

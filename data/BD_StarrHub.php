@@ -115,6 +115,7 @@ class BD{
         }
     }
 
+    /*
     public static function insertDatosUsuario($idUsuario){
         $exito = false;
         try{
@@ -128,6 +129,30 @@ class BD{
         }
         catch(PDOException $e){
             echo "Error en insertDatosUsuario(): ".$e->getMessage();
+        }
+        finally{
+            $resultado->closeCursor();
+            $conexion = null;
+            return $exito;
+        }
+    }
+    */
+
+    //SENTENCIAS UPDATE
+    public static function updateFechaRegistro($idUsuario, $fecha){
+        $exito = false;
+        try{
+            $sql = "UPDATE datos_usuario SET fecha_ultima_sesion = ?
+            WHERE id = ?";
+            $conexion = self::realizarConexion();
+            $resultado =  $conexion->prepare($sql);
+            $afectados = $resultado->execute(array($fecha, $idUsuario));
+            if ($afectados > 0){
+                $exito= true;
+            }
+        }
+        catch(PDOException $e){
+            echo "Error en updateFechaRegistro(): ".$e->getMessage();
         }
         finally{
             $resultado->closeCursor();

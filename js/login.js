@@ -50,11 +50,14 @@ function validarUsuario(){
         return false
     }
 
+    let fecha = new Date().toLocaleString('es-ES')
+
     $.ajax({
         data : {
             'validarUsuario' : 'true',
             'usuario': usuario,
-            'clave': clave
+            'clave': clave,
+            'fecha': fecha.split(',')[0]
         },
         url: './data/BD_Manager.php',
         type: 'POST',

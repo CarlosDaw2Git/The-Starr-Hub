@@ -3,11 +3,13 @@
 class DatosUsuario{
     private $id;
     private $supercellId;
+    private $fechaUltimaSesion;
 
     //Constructor
     function __construct($registro){
         $this->id = $registro['id'];
-        $this->supercellId = $registro['supercellID'];
+        $this->supercellId = $registro['supercell_id'];
+        $this->fechaUltimaSesion = $registro['fecha_ultima_sesion'];
     }
 
     //Getters y Setters
@@ -22,6 +24,12 @@ class DatosUsuario{
     }
     function setSupercellId($n){
         $this->supercellId = $n;
+    }
+    function getFechaUltimaSesion(){
+        return $this->fechaUltimaSesion;
+    }
+    function setFechaUltimaSesion($n){
+        $this->fechaUltimaSesion = $n;
     }
 
     function __toString(){

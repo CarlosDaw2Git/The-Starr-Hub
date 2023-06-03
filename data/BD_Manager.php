@@ -7,23 +7,30 @@ $data = array(
     "message" => ""
 );
 
-//Comprobar si ya existe el usuario
+//Comprobar los datos del formulario de login
 if(isset($_REQUEST['validarUsuario'])){
     $nombreUsuario = $_REQUEST['usuario'];
     $clave = $_REQUEST['clave'];
+    $fecha = $_REQUEST['fecha'];
     
+    //Buscar usuario
     $usuario = BD::selectUsuarioByNombre($nombreUsuario);
     if(empty($usuario)){
         $data['message'] = "Error: Usuario no encontrado";
     }
     else{
+        //Comprobar contraseña
         if($usuario->getClave() == md5($clave)){
             $data['success'] = true;
             $data['message'] = "Usuario encontrado";
             $data = array_merge($data, $usuario->getArrayData());
+
+            //Actualizar fecha del último inicio de sesion
+            BD::updateFechaRegistro($usuario->getId(), $fecha);
+
         }
         else{
-            $data['message'] = "Error: contraseña incorrecta";
+            $data['message'] = "Error: Contraseña incorrecta";
         }
     }
 }
@@ -46,10 +53,14 @@ if(isset($_REQUEST['crearUsuario'])){
          //Crea el usuario
         $exitoUsuario = BD::insertUsuario($nombreUsuario, $clave);
         if($exitoUsuario){
+            $data['success'] = true;
+            $data['message'] = "Usuario creado correctamente";
             /*
-            Busca el id del usuario y crea una entrada en la tabla
-            de datos de usuario
-            */
+            DISEÑO ANTERIOR
+
+            //Busca el id del usuario y crea una entrada en la tabla
+            //de datos de usuario
+            
             $usuario = BD::selectUsuarioByNombre($nombreUsuario);
             $exitoDatos = BD::insertDatosUsuario($usuario->getId());
             if($exitoDatos){
@@ -59,6 +70,7 @@ if(isset($_REQUEST['crearUsuario'])){
             else{
                 $data['message'] = "Error: No se pudo crear los datos de usuario";
             }
+            */
         }
         else{
             $data['message'] = "Error: No se pudo dar de alta al usuario";
