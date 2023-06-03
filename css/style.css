@@ -11038,6 +11038,10 @@ textarea.form-control-lg {
   font-family: "Nunito", sans-serif;
 }
 
+.titulo {
+  font-size: 60px;
+}
+
 .degradadoAzul {
   background: linear-gradient(180deg, rgb(10, 132, 229) 40%, rgb(10, 99, 229) 100%);
 }
@@ -11072,7 +11076,28 @@ textarea.form-control-lg {
 }
 
 #heroContent h1, #heroContent .h1 {
-  text-shadow: 6px 6px #000000;
+  text-shadow: 6px 6px black;
+}
+
+.evento {
+  border: 1.5pt solid #212529;
+  box-shadow: 0pt 4pt rgba(0, 0, 0, 0.25);
+}
+
+.evento .gameMode {
+  height: 65pt;
+  -webkit-text-stroke: 0.75pt black;
+  text-shadow: 2pt 2pt black;
+}
+
+.evento .bestTeam {
+  height: 120pt;
+  background-position: center;
+}
+
+.noticiaRow {
+  border: 3pt solid #70c054;
+  border-radius: 20pt;
 }
 
 #botonRegistrarse {

@@ -1,0 +1,36 @@
+<h1 class="textoBS-primary text-center p-3 titulo">Últimas noticias</h1>
+<div id="contenidoNoticias" class="container">
+</div>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url: './data/noticias.json',
+            dataType: 'json',
+            success: function(datosRecogidos){
+                cargarNoticiasRow(datosRecogidos)
+            },
+            error: function(){
+                console.log("Error al mostrar la información")
+            }
+        })
+    })
+
+    //Sección - Noticias
+    function cargarNoticiasRow(datos){
+        for (let i = 0; i < 3; i++){
+            let noticia = datos.noticias[i]
+            $('#contenidoNoticias').append(htmlNoticiaRow(noticia))
+        }
+    }
+
+    function htmlNoticiaRow(noticia){
+        return '<div class="row d-lg-flex flex-lg-row mb-5 overflow-hidden noticiaRow">\
+        <img src="./img/'+noticia.img+'" alt="" class="col-12 col-lg-4 img-fluid p-0">\
+        <div class="col-12 col-lg-8 pt-3 ps-3">\
+            <h2 class="textoBS-primary">'+noticia.titulo+'</h2>\
+            <p class="textoBS-secondary fs-4">'+noticia.subtitulo+'</p>\
+            <a href="#" class="btn btn-greenBS textoBS-primary mb-3">Ver noticia</a>\
+        </div>\
+    </div>'
+    }
+</script>

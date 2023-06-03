@@ -1,27 +1,30 @@
+MEMORIA DEL PROYECTO
+
+MANUAL DE USUARIO TAMBIÉN
+
 -BD
-    +Trigger para la creación de usuarios
+    +Trigger para la creación de usuarios[Cambios grandes]
+    +Fecha de último inicio de sesión
 -Index
-    +CardSet con varias noticias [En ello]
-    +Una sección en la que ponga qué modos de juego están ahora mismo
-    +Una sección con los 10 brawlers más usados
     +Secreto en el footer? [Si da tiempo,]
+    +Que el boton de feedback funcione (Solo con usuario y lo almaceno en la bbdd tambien?)
     +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno
     +Cambiar los logos de la página y del icono
--Perfil
-    Opciones de cambiar usuario, contraseña y supercell id (+ borrarlo)
-
+-Perfil !!!!!!!!!!!!!!!
+    +En vez de una pagina distinta, un pequeño modal
+    +Opciones de cambiar usuario, contraseña y supercell id (+ borrarlo)
 -Brawlers
+    +Que se pueda cambiar el orden
     +Al hacer click, desplegable con toda la info del personaje
 -Mapa
+    +Ordenar por modo de juego
     +Al hacer click desplegable de la info del mapa y mejores equipos
 -Noticias
-    +Almacenarlas en un JSON
-    +Mínimo 3 (referencia en el blog oficial)
-    +¿El cuerpo de las noticias en el JSON o en un TXT a parte?
+    +¿El cuerpo de las noticias en el JSON o en un TXT a parte?[JSON]
 
 -Version movil
     -index
-        +Cambiar tamaño del hero en bajas resoluciones
+        +cambiar tamaño eventos
     -login
         +boton volver al index centrado
         +menos separación del login

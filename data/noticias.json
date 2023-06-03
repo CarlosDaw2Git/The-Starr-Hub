@@ -1,19 +1,22 @@
 {
     "noticias":[
         {
-            "titulo":"¡Gadget y Habilidad Estelar de Willow!",
-            "subtitulo":"¡Nuevo Gadget y nueva Habilidad Estelar de Willow!",
-            "img":"0428_Willo_s_gadget_800x433.png"
-        },
-        {
-            "titulo":"IMPORTANTE - ¡Cambios en la Liga Estelar y en los aspectos!",
-            "subtitulo":"En la próxima actualización cambiaremos algunas cosas.",
-            "img":"0411_CHANGE_INCOMING_800x433.png"
+            "titulo":"El Rescate - Notas de Actualización",
+            "subtitulo":"Mira aquí las novedades que trae la nueva actualización de esta nueva temporada",
+            "img":"0421_Update_Live_Ops_800x433_v3.jpg",
+            "content":""
         },
         {
             "titulo":"¡Gadget y Habilidad Estelar de Willow!",
-            "subtitulo":"¡Nuevo Gadget y nueva Habilidad Estelar de Willow!",
-            "img":"440683437_1676017665.png"
+            "subtitulo":"¡Nuevo Gadget y nueva Habilidad Estelar del personaje Willow ya disponibles!",
+            "img":"0428_Willo_s_gadget_800x433.png",
+            "content":""
+        },
+        {
+            "titulo":"¡Cambios en la Liga Estelar y en los aspectos!",
+            "subtitulo":"En la próxima actualización cambiaremos varias cosas importantes. Echa un vistazo a los cambios",
+            "img":"0411_CHANGE_INCOMING_800x433.png",
+            "content":""
         }
     ]
 }
