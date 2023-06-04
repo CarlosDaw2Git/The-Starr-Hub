@@ -1,3 +1,4 @@
+let datosNoticias
 //Script principal de la página
 $(document).ready(function () {
     //-Barra de navegación
@@ -90,7 +91,8 @@ $(document).ready(function () {
         url: './data/noticias.json',
         dataType: 'json',
         success: function (datosRecogidos) {
-            cargarNoticias(datosRecogidos)
+            datosNoticias = datosRecogidos
+            cargarNoticias(datosNoticias)
         },
         error: function () {
             console.log("Error al mostrar la información")
@@ -282,13 +284,17 @@ function htmlNoticia(noticia) {
     <div class="card h-100 border-greenBS shadow-lg">\
         <img src="./img/'+ noticia.img + '" class="card-img-top" alt="...">\
         <div class="card-body">\
-            <h5 class="card-title textoBS-primary text-center">'+ noticia.titulo + '</h5>\
+            <h5 class="card-title textoBS-primary text-center tituloNoticia">'+ noticia.titulo + '</h5>\
             <p class="card-text textoBS-secondary">'+ noticia.subtitulo + '</p>\
-            <a href="#" class="btn btn-greenBS textoBS-primary">Ver noticia</a>\
+            <a href="#" class="btn btn-greenBS textoBS-primary verNoticia">Ver noticia</a>\
         </div>\
     </div>\
 </div>'
 }
+
+$(document).on("click", ".verNoticia", function(){
+    cargarNoticiaMain($(this).parent().find('.tituloNoticia').text())
+})
 
 //Sección - Eventos
 
@@ -376,4 +382,25 @@ function enviarFeedback(){
         }
     })
 
+}
+
+//APARTADO PARA CARGAR LAS NOTICIAS
+function cargarNoticiaMain(titulo){
+    lightLink($('#linkNoticias'))
+
+    for (let i = 0; i < datosNoticias.noticias.length; i++){
+        let noticia = datosNoticias.noticias[i]
+        if(noticia.titulo == titulo){
+
+            $('#contenidoWeb').html(htmlNoticiaMain(noticia))
+        }
+    }
+}
+
+function htmlNoticiaMain(noticia){
+    return '<div class="container noticiaMain" style="background-image: url(./img/'+noticia.img+');"></div>\
+        <div class="mt-3">\
+            <h2 class="titulo textoBS-primary text-center">'+noticia.titulo+'</h2>\
+            <div id="contenidoNoticia" class="container">'+noticia.content+'</div>\
+        </div>'
 }

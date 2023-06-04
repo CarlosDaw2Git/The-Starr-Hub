@@ -7,34 +7,32 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $.ajax({
-            url: 'https://api.brawlapi.com/v1/gamemodes',
-            dataType: 'json',
-            success: function(datosRecogidos){
-                cargarListaModoJuego(datosRecogidos)
-            },
-            error: function(){
-                console.log("Error al mostrar la información")
-            }
-        })
+    $.ajax({
+        url: 'https://api.brawlapi.com/v1/gamemodes',
+        dataType: 'json',
+        success: function (datosRecogidos) {
+            cargarListaModoJuego(datosRecogidos)
+        },
+        error: function () {
+            console.log("Error al mostrar la información")
+        }
     })
 
-    function cargarListaModoJuego(datos){
+    function cargarListaModoJuego(datos) {
         for (let i = 0; i < datos.list.length; i++) {
             let modoJuego = datos.list[i];
-            if(!modoJuego.disabled){
+            if (!modoJuego.disabled) {
                 $('#listaModos').append(htmlDatosModoJuego(modoJuego))
             }
-            
+
         }
     }
 
-    function htmlDatosModoJuego(modoJuego){
+    function htmlDatosModoJuego(modoJuego) {
         return '<div class="row text-center textoBS-secondary">\
-            <div class="col-4"><img class="img img-fluid w-25" src="'+modoJuego.imageUrl+'" alt="imgBrawler"></div>\
-            <div class="col-4">'+modoJuego.name+'</div>\
-            <div class="col-4">'+modoJuego.shortDescription+'</div>\
+            <div class="col-4"><img class="img img-fluid w-25" src="'+ modoJuego.imageUrl + '" alt="imgBrawler"></div>\
+            <div class="col-4">'+ modoJuego.name + '</div>\
+            <div class="col-4">'+ modoJuego.shortDescription + '</div>\
         </div>'
     }
 </script>

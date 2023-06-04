@@ -7,34 +7,32 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $.ajax({
-            url: 'https://api.brawlapi.com/v1/maps',
-            dataType: 'json',
-            success: function(datosRecogidos){
-                cargarListaMapas(datosRecogidos)
-            },
-            error: function(){
-                console.log("Error al mostrar la información")
-            }
-        })
+    $.ajax({
+        url: 'https://api.brawlapi.com/v1/maps',
+        dataType: 'json',
+        success: function (datosRecogidos) {
+            cargarListaMapas(datosRecogidos)
+        },
+        error: function () {
+            console.log("Error al mostrar la información")
+        }
     })
 
-    function cargarListaMapas(datos){
+    function cargarListaMapas(datos) {
         for (let i = 0; i < datos.list.length; i++) {
             let mapa = datos.list[i];
-            if(!mapa.disabled){
+            if (!mapa.disabled) {
                 $('#listaMapas').append(htmlDatosMapa(mapa))
             }
-            
+
         }
     }
 
-    function htmlDatosMapa(mapa){
+    function htmlDatosMapa(mapa) {
         return '<div class="row text-center textoBS-secondary">\
-            <div class="col-4"><img class="img img-fluid w-25" src="'+mapa.imageUrl+'" alt="imgBrawler"></div>\
-            <div class="col-4">'+mapa.name+'</div>\
-            <div class="col-4">'+mapa.gameMode.name+'</div>\
+            <div class="col-4"><img class="img img-fluid w-25" src="'+ mapa.imageUrl + '" alt="imgBrawler"></div>\
+            <div class="col-4">'+ mapa.name + '</div>\
+            <div class="col-4">'+ mapa.gameMode.name + '</div>\
         </div>'
     }
 </script>

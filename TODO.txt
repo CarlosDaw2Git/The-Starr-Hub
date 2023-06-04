@@ -1,19 +1,15 @@
-MEMORIA DEL PROYECTO
+MEMORIA DEL PROYECTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 MANUAL DE USUARIO TAMBIÉN
 
 -Index
-    +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno!!
-    +Cambiar los logos de la página y del icono!!!!!!!!
+    +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno!!!!!!!!!!!!!!!!!
+    +Cambiar los logos de la página y del icono!!!!!!
 -Brawlers
-    +Que se pueda cambiar el orden[SI DA TIEMPO]
     +Al hacer click, desplegable con toda la info del personaje
 -Mapa
     +Ordenar por modo de juego
     +Al hacer click desplegable de la info del mapa y mejores equipos
--Noticias
-    +¿El cuerpo de las noticias en el JSON o en un TXT a parte?[JSON]!!!!!!!!!!!!!!!
-
 -Version movil
     -index
         +cambiar tamaño eventos

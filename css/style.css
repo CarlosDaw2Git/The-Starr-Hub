@@ -11105,6 +11105,12 @@ textarea.form-control-lg {
   border-radius: 20pt;
 }
 
+.noticiaMain {
+  height: 200pt;
+  background-size: cover;
+  background-position: center;
+}
+
 #botonRegistrarse {
   padding: 8px;
   vertical-align: middle;
