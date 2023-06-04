@@ -99,6 +99,39 @@ if(isset($_REQUEST['getDatosUsuario'])){
     }
 }
 
+//Cambiar datos del usuario
+if(isset($_REQUEST['cambiarDatosUsuario'])){
+    $id = $_REQUEST['id'];
+    $nombre = $_REQUEST['usuario'];
+    $supercell_id = $_REQUEST['supercell_id'];
+
+    $exito = BD::updateDatosUsuario($id, $nombre, $supercell_id);
+    if($exito){
+        $data['success'] = true;
+        $data['message'] = "Datos actualizados correctamente";
+    }
+    else{
+        $data['message'] = "Error: No se han podido actualizar los datos del usuario";
+    }
+}
+
+//Cambiar clave del usuario
+if(isset($_REQUEST['cambiarClave'])){
+    $id = $_REQUEST['id'];
+    $clave = $_REQUEST['clave'];
+
+    $exito = BD::updateClaveUsuario($id, $clave);
+    if($exito){
+        $data['success'] = true;
+        $data['message'] = "Contraseña actualizada correctamente";
+    }
+    else{
+        $data['message'] = "Error: No se han podido actualizar la contraseña";
+    }
+}
+
+//Guardar feedback
+
 //El servidor da una respuesta
 echo json_encode($data);
 ?>

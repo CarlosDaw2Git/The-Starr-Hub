@@ -40,7 +40,8 @@ class DatosUsuario{
         return array(
             "user_data" => array(
                 "id" => $this->id,
-                "supercell_id" => $this->supercellId
+                "supercell_id" => $this->supercellId,
+                "fecha_ultima_sesion" => $this->fechaUltimaSesion
             )
         );
     }

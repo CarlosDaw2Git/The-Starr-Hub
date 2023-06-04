@@ -43,7 +43,6 @@
                         <li class="nav-item">
                             <a class="nav-link link-dark" href="#" id="linkModosJuego">Modos de Juego</a>
                         </li>
-                        <!--TODO: Ponerle algo distinto que destaque de los demás-->
                         <li class="nav-item" id="item-Perfil">
                             <a class="nav-link link-dark" href="#" id="linkPerfil">Iniciar sesión</a>
                         </li>
@@ -72,7 +71,7 @@
         <div id="listaEventos" class="container">
             <h1 class="textoBS-primary titulo text-center mb-0">Lista de eventos</h1>
             <h3 class="textoBS-primary text-center mb-0 text-warning">Desafios</h3>
-            <div id="desafios" class="row d-flex justify-content-center"></div>
+            <div id="desafios" class="row d-flex justify-content-center"><p class="text-center fs-4">Actualmente no se encuentra ningún desafio en curso</p></div>
             <h3 class="textoBS-primary text-center mb-0 text-warning">Eventos activos</h3>
             <div id="eventosActivos" class="row d-flex justify-content-center"></div>
             <h3 class="textoBS-primary text-center mb-0 text-warning">Próximos eventos</h3>
@@ -114,7 +113,7 @@
             </div>
             <div class="col-12 col-lg-4 p-4">
                 <h3 class="textoBS-primary">Coméntanos tu feedback</h3>
-                <div class="input-group mt-3 w-75">
+                <div class="input-group mt-3">
                     <input type="text" class="form-control" placeholder="Escribe algo..."
                         aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button class="btn btn-danger" type="button" id="btnFeedback">Enviar</button>
@@ -125,7 +124,22 @@
     <div class="text-center text-light bg-black textoBS-secondary">
         Brawl Stars - <i class="bi bi-c-circle"></i>&nbsp;Supercell 2017
     </div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 textoBS-primary" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button id="btnPerfilBrawlify" class="btn btn-warning textoBS-primary disabled">Perfil Brawlify (Página externa)</button>
+                    <button id="btnCerrarSesion" class="btn btn-danger textoBS-primary">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>

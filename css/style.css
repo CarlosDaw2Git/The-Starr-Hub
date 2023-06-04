@@ -11079,6 +11079,11 @@ textarea.form-control-lg {
   text-shadow: 6px 6px black;
 }
 
+#listaEventos h3, #listaEventos .h3 {
+  font-size: 45px;
+  margin: 10pt 0pt;
+}
+
 .evento {
   border: 1.5pt solid #212529;
   box-shadow: 0pt 4pt rgba(0, 0, 0, 0.25);

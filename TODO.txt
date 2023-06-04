@@ -4,11 +4,11 @@ MANUAL DE USUARIO TAMBIÉN
 
 -Index
     +Secreto en el footer? [Si da tiempo,]
-    +Que el boton de feedback funcione (Solo con usuario y lo almaceno en la bbdd tambien?)
+    +Que el boton de feedback funcione [Solo con usuario y almacenamiento en BBDD]
     +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno
     +Cambiar los logos de la página y del icono
 -Perfil !!!!!!!!!!!!!!!
-    +En vez de una pagina distinta, un pequeño modal
+    +!!!! LINK PERFIL DIFERENTE
     +Opciones de cambiar usuario, contraseña y supercell id (+ borrarlo)
 -Brawlers
     +Que se pueda cambiar el orden

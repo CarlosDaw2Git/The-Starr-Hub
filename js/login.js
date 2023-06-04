@@ -34,7 +34,7 @@ $(document).on("click", "#registrarUsuario", function(){
 })
 
 //FUNCIONES
-//Validar usuario - TODO
+//Validar usuario
 function validarUsuario(){
     $('#error').text("")
 
