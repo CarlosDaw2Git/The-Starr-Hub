@@ -72,7 +72,11 @@ $(document).ready(function () {
         })
 
         //FEEDBACK
-
+        $('#avisoFeedback').text('')
+        $('#btnFeedback').removeClass('disabled')
+        $('#btnFeedback').click(function(){
+            enviarFeedback()
+        })
     }
     else {
         //PERFIL
@@ -341,4 +345,35 @@ function getTiempoRestante(endTime) {
     minutes = minutes & 60
 
     return hours + 'H ' + minutes + 'M ' + seconds + 'S'
+}
+
+//Sección - Coméntanos tu feedback
+function enviarFeedback(){
+    $('#avisoFeedback').text('')
+
+    let msg = $('#msgFeedback').val()
+    if(msg == "" || msg == null){
+        $('#avisoFeedback').text('El mensaje no puede estar vacio')
+        return false;
+    }
+    if(msg.length > 120){
+        $('#avisoFeedback').text('El mensaje no puede ocupar más de 120 caracteres')
+        return false;
+    }
+
+    $.ajax({
+        data : {
+            'guardarFeedback' : 'true',
+            'id': getValorCookie('userID'),
+            'msg': msg
+        },
+        url: './data/BD_Manager.php',
+        type: 'POST',
+        success: function(datosRecogidos){
+            let datosJson = JSON.parse(datosRecogidos)
+            alert(datosJson.message)
+            $('#msgFeedback').val("")
+        }
+    })
+
 }

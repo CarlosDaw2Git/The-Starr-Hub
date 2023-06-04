@@ -115,6 +115,27 @@ class BD{
         }
     }
 
+    public static function insertMensaje($id, $msg){
+        $exito = false;
+        try{
+            $sql = "INSERT INTO mensajes(id_usuario, mensaje) VALUES(?, ?)";
+            $conexion = self::realizarConexion();
+            $resultado =  $conexion->prepare($sql);
+            $afectados = $resultado->execute(array($id, $msg));
+            if ($afectados > 0){
+                $exito= true;
+            }
+        }
+        catch(PDOException $e){
+            echo "Error en insertMensaje(): ".$e->getMessage();
+        }
+        finally{
+            $resultado->closeCursor();
+            $conexion = null;
+            return $exito;
+        }
+    }
+
     //SENTENCIAS UPDATE
     public static function updateFechaRegistro($idUsuario, $fecha){
         $exito = false;

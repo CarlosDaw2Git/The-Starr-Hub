@@ -4,19 +4,25 @@
             "titulo":"El Rescate - Notas de Actualización",
             "subtitulo":"Mira aquí las novedades que trae la nueva actualización de esta nueva temporada",
             "img":"0421_Update_Live_Ops_800x433_v3.jpg",
-            "content":""
+            "content":"<h1 class='textoBS-primary'>El Rescate - Notas de Actualización</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p>"
         },
         {
             "titulo":"¡Gadget y Habilidad Estelar de Willow!",
             "subtitulo":"¡Nuevo Gadget y nueva Habilidad Estelar del personaje Willow ya disponibles!",
             "img":"0428_Willo_s_gadget_800x433.png",
-            "content":""
+            "content":"<h1 class='textoBS-primary'>¡Gadget y Habilidad Estelar de Willow!</h1><p>Gadget: Buceo<br>Willow bucea durante 2 segundos. Durante este tiempo, no pueden atacarla, pero tampoco puede actuar.<br><br>Habilidad Estelar:<br>ObsesiónLos enemigos manipulados ganan un 25% de velocidad de movimiento mientras están bajo los efectos del control mental.<br><br>Gadget: Buceo<br>Willow bucea durante 2 segundos. Durante este tiempo, no pueden atacarla, pero tampoco puede actuar.<br><br>Habilidad Estelar: Obsesión<br>Los enemigos manipulados ganan un 25% de velocidad de movimiento mientras están bajo los efectos del control mental."
         },
         {
             "titulo":"¡Cambios en la Liga Estelar y en los aspectos!",
             "subtitulo":"En la próxima actualización cambiaremos varias cosas importantes. Echa un vistazo a los cambios",
             "img":"0411_CHANGE_INCOMING_800x433.png",
-            "content":""
+            "content":"<h1 class='textoBS-primary'>¡Cambios en la Liga Estelar y en los aspectos!</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p>"
+        },
+        {
+            "titulo":"¡Cambios en la Liga Estelar y en los aspectos!",
+            "subtitulo":"En la próxima actualización cambiaremos varias cosas importantes. Echa un vistazo a los cambios",
+            "img":"0411_CHANGE_INCOMING_800x433.png",
+            "content":"<h1 class='textoBS-primary'>¡Cambios en la Liga Estelar y en los aspectos!</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate, quis voluptatum repellat adipisci ad voluptates velit rem iste enim molestias nulla totam optio eos consectetur alias dolorem expedita sed similique quidem debitis, libero aliquid autem! Voluptas mollitia magnam ullam?</p>"
         }
     ]
 }

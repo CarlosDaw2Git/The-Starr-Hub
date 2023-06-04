@@ -131,6 +131,19 @@ if(isset($_REQUEST['cambiarClave'])){
 }
 
 //Guardar feedback
+if(isset($_REQUEST['guardarFeedback'])){
+    $id = $_REQUEST['id'];
+    $msg = $_REQUEST['msg'];
+
+    $exito = BD::insertMensaje($id, $msg);
+    if($exito){
+        $data['success'] = true;
+        $data['message'] = "Mensaje enviado correctamente";
+    }
+    else{
+        $data['message'] = "Error: No se han podido enviar el mensaje";
+    }
+}
 
 //El servidor da una respuesta
 echo json_encode($data);
