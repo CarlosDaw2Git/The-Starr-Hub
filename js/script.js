@@ -1,4 +1,3 @@
-let datosNoticias
 //Script principal de la página
 $(document).ready(function () {
     //-Barra de navegación
@@ -91,8 +90,7 @@ $(document).ready(function () {
         url: './data/noticias.json',
         dataType: 'json',
         success: function (datosRecogidos) {
-            datosNoticias = datosRecogidos
-            cargarNoticias(datosNoticias)
+            cargarNoticias(datosRecogidos)
         },
         error: function () {
             console.log("Error al mostrar la información")
@@ -384,17 +382,26 @@ function enviarFeedback(){
 
 }
 
-//APARTADO PARA CARGAR LAS NOTICIAS
+//APARTADO PARA CARGAR LAS NOTICIAS EN EL MAIN
 function cargarNoticiaMain(titulo){
     lightLink($('#linkNoticias'))
 
-    for (let i = 0; i < datosNoticias.noticias.length; i++){
-        let noticia = datosNoticias.noticias[i]
-        if(noticia.titulo == titulo){
-
-            $('#contenidoWeb').html(htmlNoticiaMain(noticia))
+    $.ajax({
+        url: './data/noticias.json',
+        dataType: 'json',
+        success: function (datosRecogidos) {
+            for (let i = 0; i < datosRecogidos.noticias.length; i++){
+                let noticia = datosRecogidos.noticias[i]
+                if(noticia.titulo == titulo){
+                    $('#contenidoWeb').html(htmlNoticiaMain(noticia))
+                    return true
+                }
+            }
+        },
+        error: function () {
+            console.log("Error al mostrar la información")
         }
-    }
+    })
 }
 
 function htmlNoticiaMain(noticia){
@@ -404,3 +411,5 @@ function htmlNoticiaMain(noticia){
             <div id="contenidoNoticia" class="container">'+noticia.content+'</div>\
         </div>'
 }
+
+//APARTADO PARA CARGAR LOS BRAWLERS EN EL OFF-CANVAS

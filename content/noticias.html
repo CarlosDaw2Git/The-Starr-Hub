@@ -2,7 +2,16 @@
 <div id="contenidoNoticias" class="container">
 </div>
 <script>
-    cargarNoticiasRow(datosNoticias)
+    $.ajax({
+        url: './data/noticias.json',
+        dataType: 'json',
+        success: function (datosRecogidos) {
+            cargarNoticiasRow(datosRecogidos)
+        },
+        error: function () {
+            console.log("Error al mostrar la información")
+        }
+    })
 
     //Sección - Noticias
     function cargarNoticiasRow(datos){

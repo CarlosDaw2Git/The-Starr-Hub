@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Bienvenido al Starr Hub!</title>
-    <link rel="icon" type="image/x-icon" href="img/bs-icon-tab.webp">
+    <link rel="icon" type="image/x-icon" href="img/sh_icon.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/cookies.js"></script>
@@ -18,7 +18,7 @@
     <nav id="barraNav" class="navbar navbar-expand-lg bg-body-tertiary degradadoAzul textoBS-primary">
         <div class="container-fluid">
             <a class="nav-link" href="#" id="logoInicio">
-                <img src="img/Brawl-Stars-logo.png" alt="shLogo" id="shLogoNavbar">
+                <img src="img/Starr_Hub_Logo.png" alt="shLogo" id="shLogoNavbar">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -71,7 +71,9 @@
         <div id="listaEventos" class="container">
             <h1 class="textoBS-primary titulo text-center mb-0">Lista de eventos</h1>
             <h3 class="textoBS-primary text-center mb-0 text-warning">Desafios</h3>
-            <div id="desafios" class="row d-flex justify-content-center"><p class="text-center fs-4">Actualmente no se encuentra ningún desafio en curso</p></div>
+            <div id="desafios" class="row d-flex justify-content-center">
+                <p class="text-center fs-4">Actualmente no se encuentra ningún desafio en curso</p>
+            </div>
             <h3 class="textoBS-primary text-center mb-0 text-warning">Eventos activos</h3>
             <div id="eventosActivos" class="row d-flex justify-content-center"></div>
             <h3 class="textoBS-primary text-center mb-0 text-warning">Próximos eventos</h3>
@@ -97,13 +99,16 @@
             <div class="col-12 col-lg-4 p-4">
                 <h3 class="textoBS-primary">Redes sociales</h3>
                 <div class="d-flex flex-column textoBS-secondary">
-                    <a href="https://www.reddit.com/r/Brawlstars/" target="_blank" class="link-dark text-decoration-none">
+                    <a href="https://www.reddit.com/r/Brawlstars/" target="_blank"
+                        class="link-dark text-decoration-none">
                         <i class="bi bi-reddit"></i>&nbsp;Reddit
                     </a>
-                    <a href="https://www.youtube.com/@BrawlStars" target="_blank" class="link-dark text-decoration-none">
+                    <a href="https://www.youtube.com/@BrawlStars" target="_blank"
+                        class="link-dark text-decoration-none">
                         <i class="bi bi-youtube"></i>&nbsp;Youtube
                     </a>
-                    <a href="https://www.facebook.com/brawlstars/" target="_blank" class="link-dark text-decoration-none">
+                    <a href="https://www.facebook.com/brawlstars/" target="_blank"
+                        class="link-dark text-decoration-none">
                         <i class="bi bi-facebook"></i>&nbsp;Facebook
                     </a>
                     <a href="https://twitter.com/BrawlStars" target="_blank" class="link-dark text-decoration-none">
@@ -118,7 +123,8 @@
                         aria-label="Recipient's username" aria-describedby="button-addon2" id="msgFeedback">
                     <button class="btn btn-danger disabled" type="button" id="btnFeedback">Enviar</button>
                 </div>
-                <p class="text-warning mt-1" id="avisoFeedback">Tienes que estar registrado para enviar una sugerencia</p>
+                <p class="text-warning mt-1" id="avisoFeedback">Tienes que estar registrado para enviar una sugerencia
+                </p>
             </div>
         </div>
     </footer>
@@ -135,12 +141,27 @@
                 </div>
                 <div class="modal-body"></div>
                 <div class="modal-footer d-flex justify-content-between">
-                    <button id="btnPerfilBrawlify" class="btn btn-warning textoBS-primary disabled">Perfil Brawlify (Página externa)</button>
+                    <button id="btnPerfilBrawlify" class="btn btn-warning textoBS-primary disabled">Perfil Brawlify
+                        (Página externa)</button>
                     <button id="btnCerrarSesion" class="btn btn-danger textoBS-primary">Cerrar sesión</button>
                 </div>
             </div>
         </div>
     </div>
+    <!--Off-Canvas-->
+    <!--
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+    </button>
+    -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="multiCanvas" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body"></div>
+    </div>
 </body>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </html>

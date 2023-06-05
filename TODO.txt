@@ -2,9 +2,6 @@ MEMORIA DEL PROYECTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 MANUAL DE USUARIO TAMBIÉN
 
--Index
-    +OffCanvas lateral con TODA la información de las pestañas de brawlers y mapas cuando se hace click en uno!!!!!!!!!!!!!!!!!
-    +Cambiar los logos de la página y del icono!!!!!!
 -Brawlers
     +Al hacer click, desplegable con toda la info del personaje
 -Mapa
