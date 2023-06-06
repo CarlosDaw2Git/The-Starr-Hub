@@ -6186,7 +6186,7 @@ textarea.form-control-lg {
 }
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --bs-offcanvas-zindex: 1045;
-  --bs-offcanvas-width: 400px;
+  --bs-offcanvas-width: 350pt;
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
@@ -11042,6 +11042,10 @@ textarea.form-control-lg {
   font-size: 60px;
 }
 
+.bordeLetras {
+  -webkit-text-stroke: 0.75pt black;
+}
+
 .degradadoAzul {
   background: linear-gradient(180deg, rgb(10, 132, 229) 40%, rgb(10, 99, 229) 100%);
 }
@@ -11098,6 +11102,14 @@ textarea.form-control-lg {
 .evento .bestTeam {
   height: 120pt;
   background-position: center;
+}
+
+#mejoresBrawlers div {
+  height: 40pt;
+}
+
+#gadget img, #starPower img {
+  height: 40pt;
 }
 
 .noticiaRow {

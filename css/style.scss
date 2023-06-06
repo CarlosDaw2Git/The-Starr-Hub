@@ -17,6 +17,9 @@ $theme-colors: (
   "amarilloClaro": #F8F1DA
 );
 
+//OFF-CANVAS
+$offcanvas-horizontal-width: 350pt;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
@@ -34,6 +37,10 @@ $theme-colors: (
 
 .titulo{
     font-size: 60px;
+}
+
+.bordeLetras{
+    -webkit-text-stroke: 0.75pt black;
 }
 
 //MAIN INDEX
@@ -99,6 +106,15 @@ $theme-colors: (
 .evento .bestTeam{
     height: 120pt;
     background-position: center;
+}
+
+// - OffCanvas
+#mejoresBrawlers div{
+    height: 40pt;
+}
+
+#gadget img, #starPower img{
+    height: 40pt;
 }
 
 //NOTICIAS

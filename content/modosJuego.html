@@ -31,12 +31,14 @@
     }
 
     function htmlDatosModoJuego(modoJuego) {
-        return '<div class="modoJuego mt-2 mb-2">\
+        return '<div class="modoJuego mt-2 mb-2 textoBS-primary">\
             <div class="cabecera d-flex align-items-center p-2" style="background-color:'+modoJuego.color+';">\
                 <img class="img" src="'+ modoJuego.imageUrl + '" alt="imgBrawler">\
-                <h1 class="textoBS-primary ms-3 text-light align-content-center">'+modoJuego.name+'</h1>\
+                <h1 class="ms-3 text-light align-content-center">'+modoJuego.name+'</h1>\
             </div>\
-            <p class="ms-lg-5 me-lg-5  fw-bolder">'+ modoJuego.tutorial + '</p>\
+            <div style="background-image:url('+modoJuego.imageUrl2+'); background-size:cover;" class="p-5">\
+                <p class="ms-lg-5 me-lg-5 fw-bolder fs-2 text-white bordeLetras">'+ modoJuego.tutorial + '</p>\
+            </div>\
         </div>'
     }
 </script>

@@ -103,7 +103,6 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (datosRecogidos) {
             cargarEventos(datosRecogidos)
-            //console.log(datosRecogidos.active[0])
         },
         error: function () {
             console.log("Error al mostrar la información")
@@ -318,9 +317,10 @@ function cargarEventos(datos) {
 function htmlEventos(evento) {
     return '\
     <div class="col-12 col-lg-6 p-3">\
-        <div class="evento textoBS-primary">\
-            <div class="text-bg-dark text-light text-end w-100 pe-3 fs-6 fs-lg-5">\
-                El evento termina en: <span class="text-gray">'+ getTiempoRestante(evento.endTime) + '</span>\
+        <div id="'+evento.map.id+'" class="contMapa evento textoBS-primary" type="button" \
+        data-bs-toggle="offcanvas" data-bs-target="#multiCanvas">\
+            <div class="text-bg-dark text-light text-end w-100 pe-2 fs-6 fs-lg-5">\
+                El evento termina en: <span class="text-gray pe-3">'+ getTiempoRestante(evento.endTime) + '</span>\
             </div>\
             <div class="gameMode container pt-2 pb-2 d-flex" style="background-color:'+ evento.map.gameMode.color + ';">\
                 <img src="'+ evento.map.gameMode.imageUrl + '" alt="" class="h-100">\
@@ -412,4 +412,139 @@ function htmlNoticiaMain(noticia){
         </div>'
 }
 
+//APARTADO PARA CARGAR LOS MAPAS EN EL OFF-CANVAS
+$(document).on('click', ".contMapa", function(){
+    resetOffCanvas()
+
+    let idMapa = $(this).attr("id")
+    $.ajax({
+        url: 'https://api.brawlapi.com/v1/maps/'+idMapa,
+        dataType: 'json',
+        success: function (datosRecogidos) {
+            cargarMapaOffCanvas(datosRecogidos)
+        },
+        error: function () {
+            console.log("Error al mostrar la información")
+        }
+    })
+})
+
+function cargarMapaOffCanvas(mapa){
+    $('.offcanvas-header').css("background-color", mapa.gameMode.color)
+    $('.offcanvas-title').text(mapa.name)
+    $('.offcanvas-body').html(htmlMapaOffCanvas(mapa))
+    htmlMejoresBrawlers(mapa.stats)
+}
+
+function htmlMapaOffCanvas(mapa){
+    return '<img src="'+mapa.imageUrl+'" alt="" class="img w-100 pb-3">\
+    <div>\
+        <h3 class="textoBS-primary" >Modo de juego:&nbsp;\
+            <span style="color:'+mapa.gameMode.color+';">'
+                +mapa.gameMode.name+
+            '</span>\
+        </h3>\
+    </div>\
+    <div>\
+        <h5 class="textoBS-primary text-warning">Mejores brawlers para este modo de juego:</h5>\
+        <div class="container d-flex flex-column" id="mejoresBrawlers"></div>\
+    </div>'
+}
+
+function htmlMejoresBrawlers(listaBrawlers){
+    for(let i = 0; i < 10; i++){
+        let idBrawler = listaBrawlers[i].brawler
+        $.ajax({
+            url: 'https://api.brawlapi.com/v1/brawlers/'+idBrawler,
+            dataType: 'json',
+            success: function (brawler) {
+                $('#mejoresBrawlers').append(
+                    '<div id="'+idBrawler+'" class="contBrawler mb-2" type="button" \
+                    style="border: 2px solid'+brawler.rarity.color+'">\
+                        <img src="'+brawler.imageUrl+'" class="img h-100">\
+                        <span class="textoBS-primary">'+brawler.name+'</span>\
+                    </div>'
+                )
+            },
+            error: function () {
+                console.log("Error al mostrar la información")
+            }
+        })
+    }
+
+}
+
 //APARTADO PARA CARGAR LOS BRAWLERS EN EL OFF-CANVAS
+$(document).on("click", ".contBrawler", function(){
+    resetOffCanvas()
+
+    let idBrawler = $(this).attr("id")
+    $.ajax({
+        url: 'https://api.brawlapi.com/v1/brawlers/'+idBrawler,
+        dataType: 'json',
+        success: function (datosRecogidos) {
+            cargarBrawlerOffCanvas(datosRecogidos)
+        },
+        error: function () {
+            console.log("Error al mostrar la información")
+        }
+    })
+})
+
+function cargarBrawlerOffCanvas(brawler){
+    $('.offcanvas-header').css("background-color", brawler.rarity.color)
+    $('.offcanvas-title').text(brawler.name)
+    $('.offcanvas-body').html(htmlBrawlerOffCanvas(brawler))
+    htmlHabilidadesBrawler(brawler)
+}
+
+function htmlBrawlerOffCanvas(brawler){
+    return '<img src="'+brawler.imageUrl3+'" alt="" class="img w-50 pb-3">\
+    <div class="textoBS-primary text-center">\
+        <h3>Calidad:&nbsp;<span class="bordeLetras" style="color:'+brawler.rarity.color+';">'+brawler.rarity.name+'</span></h3>\
+        <h3>Tipo:&nbsp;'+brawler.class.name+'</h3>\
+        <h3>Descripción</h3>\
+        <p class="w-100 textoBS-secondary fs-5">'+brawler.description+'</p>\
+    </div>\
+    <div id="gadget" class="textoBS-secondary">\
+        <div class="d-flex justify-content-center align-items-center mb-2">\
+            <img src="'+brawler.gadgets[0].imageUrl+'" class="img"><br>\
+            <h3 class="textoBS-primary ms-2">Gadgets</h3>\
+        </div>\
+    </div>\
+    <div id="starPower" class="textoBS-secondary">\
+        <div class="d-flex justify-content-center align-items-center mb-2">\
+            <img src="'+brawler.starPowers[0].imageUrl+'" class="img"><br>\
+            <h3 class="textoBS-primary ms-2">Habilidades estelares</h3>\
+        </div>\
+    </div>'
+}
+
+function htmlHabilidadesBrawler(brawler){
+    //Gadgets
+    for(let i = 0; i < brawler.gadgets.length; i++){
+        let gadget = brawler.gadgets[i]
+        $('#gadget').append('\
+        <h5>- '+gadget.name+'</h5>\
+        <p>'+gadget.description+'</p>\
+        ')
+    }
+    //Star Powers
+    for(let i = 0; i < brawler.starPowers.length; i++){
+        let starPower = brawler.starPowers[i]
+        $('#starPower').append('\
+        <h5>- '+starPower.name+'</h5>\
+        <p>'+starPower.description+'</p>\
+        ')
+    }
+}
+
+//Limpiar el OffCanvas
+function resetOffCanvas(){
+    $('.offcanvas-header').css("background-color", "white")
+    $('.offcanvas-title').text('')
+    $('.offcanvas-body').html('<div class="d-flex justify-content-center">\
+        <div class="spinner-border text-primary" role="status">\
+        </div>\
+    </div>')
+}

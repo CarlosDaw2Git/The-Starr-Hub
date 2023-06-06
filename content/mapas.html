@@ -1,5 +1,4 @@
 <h2 class="textoBS-primary titulo text-center p-2">Mapas</h2>
-<p class="text-danger text-center">*Ordenados por fecha de salida<br>*Solo mapas disponibles</p>
 <div class="container">
     <div class="row" id="listaMapas"></div>
 </div>
@@ -26,11 +25,12 @@
     }
 
     function htmlDatosMapa(mapa){
-        return '<div class="mapa col-6 col-lg-3 mb-4">\
-            <div id="'+mapa.id+'" class="d-flex flex-column align-items-center p-3" style="border: 5pt solid '+mapa.gameMode.color+';">\
+        return '<div class="mapa col-6 col-lg-3 mb-4 h-100">\
+            <div id="'+mapa.id+'" class="contMapa d-flex flex-column align-items-center p-3" \
+            type="button" data-bs-toggle="offcanvas" data-bs-target="#multiCanvas" \
+            style="border: 5pt solid '+mapa.gameMode.color+';">\
                 <img class="img w-100" src="'+ mapa.imageUrl + '" alt="imgMapa">\
                 <p class="textoBS-primary fs-3 mb-0">'+mapa.name+'</p>\
-                <p class="textoBS-primary fs-3" style="color:'+mapa.gameMode.color+';">'+mapa.gameMode.name+'</p>\
             </div>\
         </div>'
     }

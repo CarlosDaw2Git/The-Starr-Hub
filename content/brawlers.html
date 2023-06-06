@@ -1,5 +1,4 @@
 <h2 class="textoBS-primary titulo text-center p-2">Brawlers</h2>
-<p class="text-danger text-center pb-3">*Ordenados por fecha de salida</p>
 <div class="container">
     <div class="row" id="listaBrawlers"></div>
 </div>
@@ -20,14 +19,16 @@
     function cargarListaBrawlers(datosJson) {
         for (let i = 0; i < datosJson.list.length; i++) {
             let brawler = datosJson.list[i];
-            $('#listaBrawlers').append(getHtmlDatosBrawler(brawler))
+            $('#listaBrawlers').append(getHtmlBrawler(brawler))
 
         }
     }
 
-    function getHtmlDatosBrawler(brawler) {
+    function getHtmlBrawler(brawler) {
         return '<div class="brawler col-6 col-lg-3 mb-4">\
-            <div id="'+brawler.id+'" class="d-flex flex-column align-items-center p-3" style="border: 5pt solid '+brawler.rarity.color+';">\
+            <div id="'+brawler.id+'" class="contBrawler d-flex flex-column align-items-center p-3" \
+            type="button" data-bs-toggle="offcanvas" data-bs-target="#multiCanvas" \
+            style="border: 5pt solid '+brawler.rarity.color+';">\
                 <img class="img w-50" src="'+ brawler.imageUrl + '" alt="imgBrawler">\
                 <p class="textoBS-primary fs-3 mb-0">'+brawler.name+'</p>\
                 <p class="nombreCalidad textoBS-primary fs-3" style="color:'+brawler.rarity.color+';">'+brawler.rarity.name+'</p>\
