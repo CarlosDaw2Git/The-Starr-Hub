@@ -1,7 +1,5 @@
 MEMORIA DEL PROYECTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-MANUAL DE USUARIO TAMBIÉN
-
 -Brawlers
     +Al hacer click, desplegable con toda la info del personaje
 -Mapa

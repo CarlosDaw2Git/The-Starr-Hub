@@ -1,10 +1,9 @@
-<h2 class="textoBS-primary text-center p-3">Modos de juego</h2>
+<h2 class="textoBS-primary titulo text-center p-3">Modos de juego</h2>
 <div class="container d-flex flex-column" id="listaModos">
-    <div class="row text-center textoBS-primary fs-3">
-        <div class="col-4">Icono</div>
-        <div class="col-4">Nombre</div>
-        <div class="col-4">Descripción</div>
-    </div>
+    <h3 class="textoBS-primary text-center text-warning subtitulo">Modos de juego habilitados</h3>
+</div>
+<div class="container d-flex flex-column" id="listaModosDisabled">
+    <h3 class="textoBS-primary text-center text-warning subtitulo">Modos de juego deshabilitados</h3>
 </div>
 <script>
     $.ajax({
@@ -21,7 +20,10 @@
     function cargarListaModoJuego(datos) {
         for (let i = 0; i < datos.list.length; i++) {
             let modoJuego = datos.list[i];
-            if (!modoJuego.disabled) {
+            if (modoJuego.disabled) {
+                $('#listaModosDisabled').append(htmlDatosModoJuego(modoJuego))
+            }
+            else{
                 $('#listaModos').append(htmlDatosModoJuego(modoJuego))
             }
 
@@ -29,10 +31,12 @@
     }
 
     function htmlDatosModoJuego(modoJuego) {
-        return '<div class="row text-center textoBS-secondary">\
-            <div class="col-4"><img class="img img-fluid w-25" src="'+ modoJuego.imageUrl + '" alt="imgBrawler"></div>\
-            <div class="col-4">'+ modoJuego.name + '</div>\
-            <div class="col-4">'+ modoJuego.shortDescription + '</div>\
+        return '<div class="modoJuego mt-2 mb-2">\
+            <div class="cabecera d-flex align-items-center p-2" style="background-color:'+modoJuego.color+';">\
+                <img class="img" src="'+ modoJuego.imageUrl + '" alt="imgBrawler">\
+                <h1 class="textoBS-primary ms-3 text-light align-content-center">'+modoJuego.name+'</h1>\
+            </div>\
+            <p class="ms-lg-5 me-lg-5  fw-bolder">'+ modoJuego.tutorial + '</p>\
         </div>'
     }
 </script>
